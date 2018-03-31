@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.UserAffiliationPermissionChecks", "Osrs.Oncor.UserAffiliationPermissionChecks\Osrs.Oncor.UserAffiliationPermissionChecks.csproj", "{35827696-977C-43C5-B3E5-7AA3CF7B0378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingApp", "TestingApp\TestingApp.csproj", "{23EF576E-DEAD-4BC6-81E3-C0E2894C12A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35827696-977C-43C5-B3E5-7AA3CF7B0378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35827696-977C-43C5-B3E5-7AA3CF7B0378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35827696-977C-43C5-B3E5-7AA3CF7B0378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35827696-977C-43C5-B3E5-7AA3CF7B0378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23EF576E-DEAD-4BC6-81E3-C0E2894C12A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23EF576E-DEAD-4BC6-81E3-C0E2894C12A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23EF576E-DEAD-4BC6-81E3-C0E2894C12A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23EF576E-DEAD-4BC6-81E3-C0E2894C12A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

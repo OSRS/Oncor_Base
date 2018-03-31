@@ -1,0 +1,11 @@
+﻿{
+  "Osrs.Runtime.Configuration.ConfigurationManager, Osrs.Runtime.Configuration.Core": {
+    "provider": "Osrs.Runtime.Configuration.Providers.JsonProviderFactory, Osrs.Runtime.Configuration.Core"
+  },
+  "Osrs.Runtime.Configuration.Providers.NpgConfigurationProviderFactory, Osrs.Runtime.Configuration.Providers.Postgres": {
+    "connectionString": "Server=mediamachine;Port=5432;Database=OncorDev;User Id=myUsername;Password=myPassword;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Runtime.Configuration.Providers.JsonProviderFactory, Osrs.Runtime.Configuration.Core": {
+    "fileName": ".\\appConfig.jconfig"
+  }
+}

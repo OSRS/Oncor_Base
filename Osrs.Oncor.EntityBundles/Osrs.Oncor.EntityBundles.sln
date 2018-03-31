@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.EntityBundles", "Osrs.Oncor.EntityBundles\Osrs.Oncor.EntityBundles.csproj", "{7D9127B1-E36E-4C14-8FA0-5A6060A7ED24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingApp", "TestingApp\TestingApp.csproj", "{5758E532-2021-4793-A0B7-86B3B0664006}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D9127B1-E36E-4C14-8FA0-5A6060A7ED24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9127B1-E36E-4C14-8FA0-5A6060A7ED24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9127B1-E36E-4C14-8FA0-5A6060A7ED24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9127B1-E36E-4C14-8FA0-5A6060A7ED24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5758E532-2021-4793-A0B7-86B3B0664006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5758E532-2021-4793-A0B7-86B3B0664006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5758E532-2021-4793-A0B7-86B3B0664006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5758E532-2021-4793-A0B7-86B3B0664006}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

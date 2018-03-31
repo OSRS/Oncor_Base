@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A930F41-9FD4-4358-A2C1-B899B54C130A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg</RootNamespace>
+    <AssemblyName>Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Db.cs" />
+    <Compile Include="PgWaterQualityProviderFactory.cs" />
+    <Compile Include="PgWQDeploymentProvider.cs" />
+    <Compile Include="PgWQMeasurementProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Osrs.Oncor.WellKnown.WaterQuality.Module\Osrs.Oncor.WellKnown.WaterQuality.Module.csproj">
+      <Project>{42ea369a-6160-41c2-aa0a-7844d42c682d}</Project>
+      <Name>Osrs.Oncor.WellKnown.WaterQuality.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Osrs.Oncor.WellKnown.WaterQuality\Osrs.Oncor.WellKnown.WaterQuality.csproj">
+      <Project>{24ebae7e-3ca3-498f-9acc-76a5edbc0467}</Project>
+      <Name>Osrs.Oncor.WellKnown.WaterQuality</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Osrs.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Data.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Data.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Data.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Data.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.UserAffiliationPermissionChecks">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.UserAffiliationPermissionChecks.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Configuration.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Configuration.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Logging.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authorization">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authorization.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authorization.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Organizations">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Organizations.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.UserAffiliation">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.UserAffiliation.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.UserAffiliation.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.UserAffiliation.Module.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

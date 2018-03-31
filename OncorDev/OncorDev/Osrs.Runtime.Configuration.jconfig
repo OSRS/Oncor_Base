@@ -1,0 +1,8 @@
+﻿{
+  "Osrs.Runtime.Configuration.ConfigurationManager, Osrs.Runtime.Configuration.Core": {
+    "provider": "Osrs.Runtime.Configuration.Providers.JsonProviderFactory, Osrs.Runtime.Configuration.Core"
+  },
+  "Osrs.Runtime.Configuration.Providers.JsonProviderFactory, Osrs.Runtime.Configuration.Core": {
+    "fileName": ".\\appConfig.jconfig"
+  }
+}

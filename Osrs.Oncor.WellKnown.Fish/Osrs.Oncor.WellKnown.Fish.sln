@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.Fish", "Osrs.Oncor.WellKnown.Fish\Osrs.Oncor.WellKnown.Fish.csproj", "{D1727B36-EA24-45FD-B2D2-CD5E7A820273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.Fish.Module", "Osrs.Oncor.WellKnown.Fish.Module\Osrs.Oncor.WellKnown.Fish.Module.csproj", "{AC4BFB40-D217-48ED-862F-269F215501BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.Fish.Providers.Pg", "Osrs.Oncor.WellKnown.Fish.Providers.Pg\Osrs.Oncor.WellKnown.Fish.Providers.Pg.csproj", "{66C9F9DE-1B59-4EC5-8BA9-66FC1A6F933F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingApp", "TestingApp\TestingApp.csproj", "{5A3193CB-07E4-49D1-9C04-42D6D1256603}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1727B36-EA24-45FD-B2D2-CD5E7A820273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1727B36-EA24-45FD-B2D2-CD5E7A820273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1727B36-EA24-45FD-B2D2-CD5E7A820273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1727B36-EA24-45FD-B2D2-CD5E7A820273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC4BFB40-D217-48ED-862F-269F215501BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4BFB40-D217-48ED-862F-269F215501BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4BFB40-D217-48ED-862F-269F215501BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4BFB40-D217-48ED-862F-269F215501BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C9F9DE-1B59-4EC5-8BA9-66FC1A6F933F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C9F9DE-1B59-4EC5-8BA9-66FC1A6F933F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C9F9DE-1B59-4EC5-8BA9-66FC1A6F933F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C9F9DE-1B59-4EC5-8BA9-66FC1A6F933F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A3193CB-07E4-49D1-9C04-42D6D1256603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3193CB-07E4-49D1-9C04-42D6D1256603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3193CB-07E4-49D1-9C04-42D6D1256603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3193CB-07E4-49D1-9C04-42D6D1256603}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

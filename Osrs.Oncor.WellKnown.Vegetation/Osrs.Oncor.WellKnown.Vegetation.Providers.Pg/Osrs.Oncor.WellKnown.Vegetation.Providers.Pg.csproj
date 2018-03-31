@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D9290C2-B073-45D3-B04B-600E9D55535B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Osrs.Oncor.WellKnown.Vegetation.Providers.Pg</RootNamespace>
+    <AssemblyName>Osrs.Oncor.WellKnown.Vegetation.Providers.Pg</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Db.cs" />
+    <Compile Include="PgVegetationProviderFactory.cs" />
+    <Compile Include="PgVegSampleProvider.cs" />
+    <Compile Include="PgVegSurveyProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Osrs.Oncor.WellKnown.Vegetation.Module\Osrs.Oncor.WellKnown.Vegetation.Module.csproj">
+      <Project>{953aad20-28fd-4faf-88c1-2bf8e2623f78}</Project>
+      <Name>Osrs.Oncor.WellKnown.Vegetation.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Osrs.Oncor.WellKnown.Vegetation\Osrs.Oncor.WellKnown.Vegetation.csproj">
+      <Project>{384f5cb0-e6a8-44ab-acfd-7d36bbb78cde}</Project>
+      <Name>Osrs.Oncor.WellKnown.Vegetation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Osrs.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Data.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Data.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Data.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Data.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial.Geometry.Double">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.Geometry.Double.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial.Geometry.Ogc">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.Geometry.Ogc.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.UserAffiliationPermissionChecks">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.UserAffiliationPermissionChecks.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Configuration.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Configuration.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Logging.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authorization">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authorization.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authorization.Module.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

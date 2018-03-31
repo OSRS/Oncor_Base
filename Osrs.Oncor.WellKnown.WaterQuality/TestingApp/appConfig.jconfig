@@ -1,0 +1,33 @@
+﻿{
+  "Osrs.WellKnown.FieldActivities.Providers.PgFieldActivityProviderFactory, Osrs.WellKnown.FieldActivities.Providers.Postgres": {
+    "connectionString": "Server=mediamachine;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg.PgWaterQualityProviderFactory, Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg": {
+    "connectionString": "Server=mediamachine;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Oncor.WellKnown.WaterQuality.Module.WaterQualityManager, Osrs.Oncor.WellKnown.WaterQuality.Module": {
+    "provider": "Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg.PgWaterQualityProviderFactory, Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg"
+  },
+  "Osrs.Runtime.Logging.LogManager, Osrs.Runtime.Logging.Core": {
+    "provider": "Osrs.Runtime.Logging.Providers.FlatFileLogFactory, Osrs.Runtime.Logging.Providers.FlatFileLogger"
+  },
+  "Osrs.Runtime.Logging.Providers.FlatFileLogFactory, Osrs.Runtime.Logging.Providers.FlatFileLogger": {
+    "fileName": "B:\\Data\\sampleLog.log"
+  },
+  "Osrs.Security.Identity.IdentityManager, Osrs.Security.Identity.Module": {
+    "provider": "Osrs.Security.Identity.Providers.PostgresIdentityProviderFactory, Osrs.Security.Identity.Providers.Postgres"
+  },
+  "Osrs.Security.Identity.Providers.PostgresIdentityProviderFactory, Osrs.Security.Identity.Providers.Postgres": {
+    "connectionString": "Server=mediamachine;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Security.Authorization.Providers.PostgresPermissionProviderFactory, Osrs.Security.Authorization.Providers.Postgres": {
+    "connectionString": "Server=mediamachine;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Security.Authorization.Providers.PostgresRoleProviderFactory, Osrs.Security.Authorization.Providers.Postgres": {
+    "connectionString": "Server=mediamachine;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Security.Authorization.AuthorizationManager, Osrs.Security.Authorization.Module": {
+    "roleProvider": "Osrs.Security.Authorization.Providers.PostgresRoleProviderFactory, Osrs.Security.Authorization.Providers.Postgres",
+    "permissionProvider": "Osrs.Security.Authorization.Providers.PostgresPermissionProviderFactory, Osrs.Security.Authorization.Providers.Postgres"
+  }
+}

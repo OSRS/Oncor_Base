@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.WaterQuality", "Osrs.Oncor.WellKnown.WaterQuality\Osrs.Oncor.WellKnown.WaterQuality.csproj", "{24EBAE7E-3CA3-498F-9ACC-76A5EDBC0467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.WaterQuality.Module", "Osrs.Oncor.WellKnown.WaterQuality.Module\Osrs.Oncor.WellKnown.WaterQuality.Module.csproj", "{42EA369A-6160-41C2-AA0A-7844D42C682D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg", "Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg\Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg.csproj", "{2A930F41-9FD4-4358-A2C1-B899B54C130A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingApp", "TestingApp\TestingApp.csproj", "{B6F72F6E-9012-4B27-BBDF-2D6EE10D3085}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24EBAE7E-3CA3-498F-9ACC-76A5EDBC0467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EBAE7E-3CA3-498F-9ACC-76A5EDBC0467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EBAE7E-3CA3-498F-9ACC-76A5EDBC0467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EBAE7E-3CA3-498F-9ACC-76A5EDBC0467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42EA369A-6160-41C2-AA0A-7844D42C682D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EA369A-6160-41C2-AA0A-7844D42C682D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EA369A-6160-41C2-AA0A-7844D42C682D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EA369A-6160-41C2-AA0A-7844D42C682D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A930F41-9FD4-4358-A2C1-B899B54C130A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A930F41-9FD4-4358-A2C1-B899B54C130A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A930F41-9FD4-4358-A2C1-B899B54C130A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A930F41-9FD4-4358-A2C1-B899B54C130A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F72F6E-9012-4B27-BBDF-2D6EE10D3085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F72F6E-9012-4B27-BBDF-2D6EE10D3085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F72F6E-9012-4B27-BBDF-2D6EE10D3085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F72F6E-9012-4B27-BBDF-2D6EE10D3085}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

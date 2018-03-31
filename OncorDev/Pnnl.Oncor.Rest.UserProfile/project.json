@@ -1,0 +1,12 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "NETStandard.Library": "2.0.0",
+    "Newtonsoft.Json": "10.0.3",
+    "Npgsql": "3.2.7"
+  },
+  "frameworks": {
+    "netstandard1.4": {}
+  }
+}

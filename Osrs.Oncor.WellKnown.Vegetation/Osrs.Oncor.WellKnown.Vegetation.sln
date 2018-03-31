@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.Vegetation", "Osrs.Oncor.WellKnown.Vegetation\Osrs.Oncor.WellKnown.Vegetation.csproj", "{384F5CB0-E6A8-44AB-ACFD-7D36BBB78CDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.Vegetation.Module", "Osrs.Oncor.WellKnown.Vegetation.Module\Osrs.Oncor.WellKnown.Vegetation.Module.csproj", "{953AAD20-28FD-4FAF-88C1-2BF8E2623F78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.WellKnown.Vegetation.Providers.Pg", "Osrs.Oncor.WellKnown.Vegetation.Providers.Pg\Osrs.Oncor.WellKnown.Vegetation.Providers.Pg.csproj", "{0D9290C2-B073-45D3-B04B-600E9D55535B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingApp", "TestingApp\TestingApp.csproj", "{D41B3BCE-018B-4BF7-BC72-3D0C55476D0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{384F5CB0-E6A8-44AB-ACFD-7D36BBB78CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384F5CB0-E6A8-44AB-ACFD-7D36BBB78CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384F5CB0-E6A8-44AB-ACFD-7D36BBB78CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384F5CB0-E6A8-44AB-ACFD-7D36BBB78CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{953AAD20-28FD-4FAF-88C1-2BF8E2623F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{953AAD20-28FD-4FAF-88C1-2BF8E2623F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{953AAD20-28FD-4FAF-88C1-2BF8E2623F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{953AAD20-28FD-4FAF-88C1-2BF8E2623F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D9290C2-B073-45D3-B04B-600E9D55535B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9290C2-B073-45D3-B04B-600E9D55535B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D9290C2-B073-45D3-B04B-600E9D55535B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9290C2-B073-45D3-B04B-600E9D55535B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41B3BCE-018B-4BF7-BC72-3D0C55476D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41B3BCE-018B-4BF7-BC72-3D0C55476D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41B3BCE-018B-4BF7-BC72-3D0C55476D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41B3BCE-018B-4BF7-BC72-3D0C55476D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

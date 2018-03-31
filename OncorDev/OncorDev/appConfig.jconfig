@@ -1,0 +1,167 @@
+﻿{
+  "Osrs.Net.Http.Handlers.SimpleFileHandler, Osrs.Net.Http.Server": {
+    "rootDirectory": "C://Users//d3p024//Documents//NetBeansProjects//sites//oncor//public_html",
+    "logicalDirectory": "/",
+    "defaultFiles": [ "index.html" ],
+    "allowedExtensions": [ "htm", "html", "css", "js", "gif", "jpg", "png", "woff2", "ttf", "eot", "otf", "ico", "svg", "docx", "pdf" ]
+  },
+	"Osrs.Net.Http.Listener.HttpListenerServerListener, Osrs.Net.Http.Listener": {
+		"listenerUrls": [ "http://localhost:4000" ]
+	},
+
+	"Osrs.Oncor.EntityBundles.EntityBundleProvider, Osrs.Oncor.EntityBundles": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Pnnl.Oncor.Rest.Security.Login, Pnnl.Oncor.Rest.Security": {
+		"smtpPort": 587,
+		"smtpServer": "smtp.gmail.com",
+		"smtpEmail": "oncordev@gmail.com",
+		"smtpPassword": "JweIAail247!",
+		"smtpMessageSubject": "Maintenance for your ONCOR Account",
+		"activateUrl": "http://localhost:4000/activate.html",
+		"resetUrl": "http://localhost:4000/signin.html"
+	},
+	"Osrs.Oncor.FileStore.FileStoreManager, Osrs.Oncor.FileStore": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;",
+		"basePath": "B:\\data\\tmp"
+	},
+
+	"Pnnl.Oncor.Rest.UserProfile.Request, Pnnl.Oncor.Rest.UserProfile": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+
+	"Osrs.Oncor.Wellknown.Persons.PersonManager, Osrs.Oncor.Wellknown.Persons": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;",
+		"provider": "Osrs.Oncor.Wellknown.Persons.PersonProvider"
+	},
+
+	"Pnnl.Oncor.DetProcessor.DetRegistry, Pnnl.Oncor.DetProcessor": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+
+	"Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg.PgWaterQualityProviderFactory, Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.Oncor.WellKnown.WaterQuality.Module.WaterQualityManager, Osrs.Oncor.WellKnown.WaterQuality.Module": {
+		"provider": "Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg.PgWaterQualityProviderFactory, Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg"
+	},
+
+	"Osrs.Oncor.WellKnown.Fish.Providers.Pg.PgFishProviderFactory, Osrs.Oncor.WellKnown.Fish.Providers.Pg": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.Oncor.WellKnown.Fish.Module.FishManager, Osrs.Oncor.WellKnown.Fish.Module": {
+		"provider": "Osrs.Oncor.WellKnown.Fish.Providers.Pg.PgFishProviderFactory, Osrs.Oncor.WellKnown.Fish.Providers.Pg"
+	},
+
+	"Osrs.Oncor.WellKnown.Vegetation.Providers.Pg.PgVegetationProviderFactory, Osrs.Oncor.WellKnown.Vegetation.Providers.Pg": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.Oncor.WellKnown.Vegetation.Module.VegetationManager, Osrs.Oncor.WellKnown.Vegetation.Module": {
+		"provider": "Osrs.Oncor.WellKnown.Vegetation.Providers.Pg.PgVegetationProviderFactory, Osrs.Oncor.WellKnown.Vegetation.Providers.Pg"
+	},
+
+	"Osrs.WellKnown.FieldActivities.Providers.PgFieldActivityProviderFactory, Osrs.WellKnown.FieldActivities.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.WellKnown.FieldActivities.FieldActivityManager, Osrs.WellKnown.FieldActivities.Module": {
+		"provider": "Osrs.WellKnown.FieldActivities.Providers.PgFieldActivityProviderFactory, Osrs.WellKnown.FieldActivities.Providers.Postgres"
+	},
+
+	"Osrs.WellKnown.Sites.Providers.PgSiteProviderFactory, Osrs.WellKnown.Sites.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.WellKnown.Sites.SiteManager, Osrs.WellKnown.Sites.Module": {
+		"provider": "Osrs.WellKnown.Sites.Providers.PgSiteProviderFactory, Osrs.WellKnown.Sites.Providers.Postgres"
+	},
+
+	"Osrs.WellKnown.SensorsAndInstruments.Providers.PgInstrumentProviderFactory, Osrs.WellKnown.SensorsAndInstruments.Providers.Pg": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.WellKnown.SensorsAndInstruments.InstrumentManager, Osrs.WellKnown.SensorsAndInstruments.Module": {
+		"provider": "Osrs.WellKnown.SensorsAndInstruments.Providers.PgInstrumentProviderFactory, Osrs.WellKnown.SensorsAndInstruments.Providers.Pg"
+	},
+
+	"Osrs.WellKnown.Taxonomy.Providers.PgTaxonomyProviderFactory, Osrs.WellKnown.Taxonomy.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.WellKnown.Taxonomy.TaxonomyManager, Osrs.WellKnown.Taxonomy.Module": {
+		"provider": "Osrs.WellKnown.Taxonomy.Providers.PgTaxonomyProviderFactory, Osrs.WellKnown.Taxonomy.Providers.Postgres"
+	},
+
+	"Osrs.WellKnown.Projects.Providers.PgProjectProviderFactory, Osrs.WellKnown.Projects.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.WellKnown.Projects.ProjectManager, Osrs.WellKnown.Projects.Module": {
+		"provider": "Osrs.WellKnown.Projects.Providers.PgProjectProviderFactory, Osrs.WellKnown.Projects.Providers.Postgres"
+	},
+
+	"Osrs.WellKnown.OrganizationHierarchies.Providers.PgOrgHierarchyProviderFactory, Osrs.WellKnown.OrganizationHierarchies.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.WellKnown.OrganizationHierarchies.OrganizationHierarchyManager, Osrs.WellKnown.OrganizationHierarchies.Module": {
+		"provider": "Osrs.WellKnown.OrganizationHierarchies.Providers.PgOrgHierarchyProviderFactory, Osrs.WellKnown.OrganizationHierarchies.Providers.Postgres"
+	},
+	"Osrs.WellKnown.Organizations.Providers.PostgresOrganizationProviderFactory, Osrs.WellKnown.Organizations.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.WellKnown.Organizations.OrganizationManager, Osrs.WellKnown.Organizations.Module": {
+		"provider": "Osrs.WellKnown.Organizations.Providers.PostgresOrganizationProviderFactory, Osrs.WellKnown.Organizations.Providers.Postgres"
+	},
+
+	"Osrs.WellKnown.UserAffiliation.Providers.PgUserAffiliationProviderFactory, Osrs.WellKnown.UserAffiliation.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.WellKnown.UserAffiliation.UserAffiliationManager, Osrs.WellKnown.UserAffiliation.Module": {
+		"provider": "Osrs.WellKnown.UserAffiliation.Providers.PgUserAffiliationProviderFactory, Osrs.WellKnown.UserAffiliation.Providers.Postgres"
+	},
+
+	"Osrs.Security.Authentication.Providers.UserPasswordProviderFactory, Osrs.Security.Authentication.Providers.UserPassword": {
+		"historyProvider": "Osrs.Security.Authentication.Providers.PgUserPasswordHistoryProviderFactory, Osrs.Security.Authentication.Providers.PgUserPassHistory",
+		"maxHistory": 10,
+		"hashLength": 8192,
+		"hashMinChar": 32,
+		"hashMaxChar": 126
+	},
+	"Osrs.Security.Authentication.Providers.PgUserPasswordHistoryProviderFactory, Osrs.Security.Authentication.Providers.PgUserPassHistory": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.Security.Authentication.PgCredentialStoreFactory, Osrs.Security.Authentication.Providers.PgCredentialStore": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.Security.Authentication.AuthenticationManager, Osrs.Security.Authentication.Module": {
+		"authenticationProvider": "Osrs.Security.Authentication.Providers.UserPasswordProviderFactory, Osrs.Security.Authentication.Providers.UserPassword",
+		"credentialProvider": "Osrs.Security.Authentication.PgCredentialStoreFactory, Osrs.Security.Authentication.Providers.PgCredentialStore"
+	},
+	"Osrs.Security.Identity.IdentityManager, Osrs.Security.Identity.Module": {
+		"provider": "Osrs.Security.Identity.Providers.PostgresIdentityProviderFactory, Osrs.Security.Identity.Providers.Postgres"
+	},
+	"Osrs.Security.Identity.Providers.PostgresIdentityProviderFactory, Osrs.Security.Identity.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.Security.Authorization.Providers.PostgresPermissionProviderFactory, Osrs.Security.Authorization.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.Security.Authorization.Providers.PostgresRoleProviderFactory, Osrs.Security.Authorization.Providers.Postgres": {
+		"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+	},
+	"Osrs.Security.Authorization.Providers.CachingPermissionProviderFactory, Osrs.Security.Authorization.Providers.Cache": {
+		"provider": "Osrs.Security.Authorization.Providers.PostgresPermissionProviderFactory, Osrs.Security.Authorization.Providers.Postgres"
+	},
+	"Osrs.Security.Authorization.Providers.CachingRoleProviderFactory, Osrs.Security.Authorization.Providers.Cache": {
+		"provider": "Osrs.Security.Authorization.Providers.PostgresRoleProviderFactory, Osrs.Security.Authorization.Providers.Postgres"
+	},
+	"Osrs.Security.Authorization.AuthorizationManager, Osrs.Security.Authorization.Module": {
+		"roleProvider": "Osrs.Security.Authorization.Providers.CachingRoleProviderFactory, Osrs.Security.Authorization.Providers.Cache",
+		"permissionProvider": "Osrs.Security.Authorization.Providers.CachingPermissionProviderFactory, Osrs.Security.Authorization.Providers.Cache"
+	},
+	"Osrs.Security.Sessions.SessionManager, Osrs.Security.Sessions.Module": {
+		"provider": "Osrs.Security.Sessions.Providers.MemorySessionProviderFactory, Osrs.Security.Sessions.Module",
+		"duration": 0
+	},
+	"Osrs.Runtime.Logging.Providers.FlatFileLogFactory, Osrs.Runtime.Logging.Providers.FlatFileLogger": {
+		"fileName": "B:\\data\\sampleLog.log"
+	},
+	"Osrs.Runtime.Logging.LogManager, Osrs.Runtime.Logging.Core": {
+		"provider": "Osrs.Runtime.Logging.Providers.FlatFileLogFactory, Osrs.Runtime.Logging.Providers.FlatFileLogger"
+	}
+}

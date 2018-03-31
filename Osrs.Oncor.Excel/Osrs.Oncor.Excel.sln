@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrs.Oncor.Excel", "Osrs.Oncor.Excel\Osrs.Oncor.Excel.csproj", "{F5300082-0D80-40EF-B90B-8827698E5902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingApp", "TestingApp\TestingApp.csproj", "{77DD9489-7037-429B-B327-F339A4A4618D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F5300082-0D80-40EF-B90B-8827698E5902} = {F5300082-0D80-40EF-B90B-8827698E5902}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUnitTests", "ExcelUnitTests\ExcelUnitTests.csproj", "{1C5A06F1-D0FF-4A3C-881B-618F91E27FDE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F5300082-0D80-40EF-B90B-8827698E5902} = {F5300082-0D80-40EF-B90B-8827698E5902}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4F901ED-2987-4BDF-86A3-6CB62039E7C5}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5300082-0D80-40EF-B90B-8827698E5902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5300082-0D80-40EF-B90B-8827698E5902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5300082-0D80-40EF-B90B-8827698E5902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5300082-0D80-40EF-B90B-8827698E5902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77DD9489-7037-429B-B327-F339A4A4618D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77DD9489-7037-429B-B327-F339A4A4618D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77DD9489-7037-429B-B327-F339A4A4618D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77DD9489-7037-429B-B327-F339A4A4618D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C5A06F1-D0FF-4A3C-881B-618F91E27FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5A06F1-D0FF-4A3C-881B-618F91E27FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5A06F1-D0FF-4A3C-881B-618F91E27FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5A06F1-D0FF-4A3C-881B-618F91E27FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

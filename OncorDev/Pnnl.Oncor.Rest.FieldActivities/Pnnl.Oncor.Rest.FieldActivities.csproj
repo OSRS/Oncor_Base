@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16C18475-2EF5-4F82-A45C-593FDA774976}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pnnl.Oncor.Rest.FieldActivities</RootNamespace>
+    <AssemblyName>Pnnl.Oncor.Rest.FieldActivities</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FieldActivitiesHandler.cs" />
+    <Compile Include="FieldActivityHandler.cs" />
+    <Compile Include="FieldTeamHandler.cs" />
+    <Compile Include="Jsonifier.cs" />
+    <Compile Include="SampleEventHandler.cs" />
+    <Compile Include="FieldTripHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamRolesHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Osrs.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Http.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Net.Http.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Http.Server">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Net.Http.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Servers">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Net.Servers.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Services">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Runtime.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Sessions">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Security.Sessions.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Sessions.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Security.Sessions.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Text">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.WellKnown.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.WellKnown.FieldActivities.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.WellKnown.FieldActivities.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.WellKnown.FieldActivities.Providers.Postgres.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Security\Pnnl.Oncor.Rest.Security.csproj">
+      <Project>{94abb1a9-3a28-4b67-9c5d-53c4cf420cfe}</Project>
+      <Name>Pnnl.Oncor.Rest.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest\Pnnl.Oncor.Rest.csproj">
+      <Project>{4709669e-3afe-42f3-8e6e-4d6d428330ad}</Project>
+      <Name>Pnnl.Oncor.Rest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

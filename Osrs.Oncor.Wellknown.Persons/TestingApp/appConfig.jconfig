@@ -1,0 +1,27 @@
+﻿{
+  "Osrs.Oncor.Wellknown.Persons.PersonManager, Osrs.Oncor.Wellknown.Persons": {
+	"connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Runtime.Logging.LogManager, Osrs.Runtime.Logging.Core": {
+    "provider": "Osrs.Runtime.Logging.Providers.FlatFileLogFactory, Osrs.Runtime.Logging.Providers.FlatFileLogger"
+  },
+  "Osrs.Runtime.Logging.Providers.FlatFileLogFactory, Osrs.Runtime.Logging.Providers.FlatFileLogger": {
+    "fileName": "B:\\Data\\sampleLog.log"
+  },
+  "Osrs.Security.Identity.IdentityManager, Osrs.Security.Identity.Module": {
+    "provider": "Osrs.Security.Identity.Providers.PostgresIdentityProviderFactory, Osrs.Security.Identity.Providers.Postgres"
+  },
+  "Osrs.Security.Identity.Providers.PostgresIdentityProviderFactory, Osrs.Security.Identity.Providers.Postgres": {
+    "connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Security.Authorization.Providers.PostgresPermissionProviderFactory, Osrs.Security.Authorization.Providers.Postgres": {
+    "connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Security.Authorization.Providers.PostgresRoleProviderFactory, Osrs.Security.Authorization.Providers.Postgres": {
+    "connectionString": "Server=localhost;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;"
+  },
+  "Osrs.Security.Authorization.AuthorizationManager, Osrs.Security.Authorization.Module": {
+    "roleProvider": "Osrs.Security.Authorization.Providers.PostgresRoleProviderFactory, Osrs.Security.Authorization.Providers.Postgres",
+    "permissionProvider": "Osrs.Security.Authorization.Providers.PostgresPermissionProviderFactory, Osrs.Security.Authorization.Providers.Postgres"
+  }
+}

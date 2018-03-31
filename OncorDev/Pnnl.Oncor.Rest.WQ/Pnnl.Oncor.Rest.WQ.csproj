@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{966D19A6-2C38-4D4B-8AEE-3ECF5A3DE7B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pnnl.Oncor.Rest.WQ</RootNamespace>
+    <AssemblyName>Pnnl.Oncor.Rest.WQ</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Jsonifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WQHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Security\Pnnl.Oncor.Rest.Security.csproj">
+      <Project>{94abb1a9-3a28-4b67-9c5d-53c4cf420cfe}</Project>
+      <Name>Pnnl.Oncor.Rest.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest\Pnnl.Oncor.Rest.csproj">
+      <Project>{4709669e-3afe-42f3-8e6e-4d6d428330ad}</Project>
+      <Name>Pnnl.Oncor.Rest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Osrs.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Http.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Http.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Http.Server">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Http.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial.Geometry.Double">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.Geometry.Double.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial.Geometry.Ogc">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.Geometry.Ogc.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.Excel">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.FileStore">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.FileStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.SimpleDb">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.SimpleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.WaterQuality">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.WaterQuality.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.WaterQuality.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.WaterQuality.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Services">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Sessions">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Sessions.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Sessions.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Sessions.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.FieldActivities.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.FieldActivities.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.FieldActivities.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Organizations">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Organizations.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Organizations.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Organizations.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Organizations.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Organizations.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Projects">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Projects.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Projects.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Projects.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Projects.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Projects.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Sites">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Sites.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Sites.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Sites.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Sites.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Sites.Providers.Postgres.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

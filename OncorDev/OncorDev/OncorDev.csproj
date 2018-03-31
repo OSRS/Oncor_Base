@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3C22DDC-97C0-4874-A567-5C2D6C4E1BEC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OncorDev</RootNamespace>
+    <AssemblyName>OncorDev</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\nuget\OpenXml SDK 272\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDETs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\ExcelDETs.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.7\lib\net451\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Osrs.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Data.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Data.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Data.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Data.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Http.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Http.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Http.Listener">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Http.Listener.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Http.Server">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Http.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Mail">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Net.Servers">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Net.Servers.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial.Geometry.Double">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.Geometry.Double.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial.Geometry.GeoJson">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.Geometry.GeoJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Numerics.Spatial.Geometry.Ogc">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Numerics.Spatial.Geometry.Ogc.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.DetFactories, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.DetFactories.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.EntityBundles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.EntityBundles.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.Excel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.FileStore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.FileStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.UserAffiliationPermissionChecks">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Pnnl\Osrs.Oncor.UserAffiliationPermissionChecks.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.Fish, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.Fish.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.Fish.Module, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.Fish.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.Fish.Providers.Pg">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.Fish.Providers.Pg.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.Wellknown.Persons">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Pnnl\Osrs.Oncor.Wellknown.Persons.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.Vegetation">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.Vegetation.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.Vegetation.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.Vegetation.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.Vegetation.Providers.Pg">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Osrs.Oncor.WellKnown.Vegetation.Providers.Pg.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.WaterQuality, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Pnnl\Osrs.Oncor.WellKnown.WaterQuality.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.WaterQuality.Module, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Pnnl\Osrs.Oncor.WellKnown.WaterQuality.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Pnnl\Osrs.Oncor.WellKnown.WaterQuality.Providers.Pg.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Configuration.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Configuration.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Logging.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Logging.Providers.FlatFileLogger">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Logging.Providers.FlatFileLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Runtime.Services">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Runtime.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authentication">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authentication.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authentication.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authentication.Providers.PgCredentialStore">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authentication.Providers.PgCredentialStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authentication.Providers.PgUserPassHistory">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authentication.Providers.PgUserPassHistory.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authentication.Providers.UserPassword">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authentication.Providers.UserPassword.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authorization">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authorization.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authorization.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authorization.Providers.Cache">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.Security.Authorization.Providers.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Authorization.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Authorization.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Cryptography">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Identity">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Identity.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Identity.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Identity.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Identity.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Passwords">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Passwords.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Sessions">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Sessions.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Sessions.Authentication">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Sessions.Authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Security.Sessions.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Security.Sessions.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.Text, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.FieldActivities.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.FieldActivities.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.FieldActivities.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.FieldActivities.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.OrganizationHierarchies">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.OrganizationHierarchies.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.OrganizationHierarchies.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.OrganizationHierarchies.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.OrganizationHierarchies.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.OrganizationHierarchies.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Organizations">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Organizations.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Organizations.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Organizations.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Organizations.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Organizations.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Projects">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Projects.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Projects.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Osrs\Osrs.WellKnown.Projects.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Projects.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Projects.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.SensorsAndInstruments">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.SensorsAndInstruments.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.SensorsAndInstruments.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.SensorsAndInstruments.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.SensorsAndInstruments.Providers.Pg">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.SensorsAndInstruments.Providers.Pg.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Sites">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Sites.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Sites.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Sites.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Sites.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Sites.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Taxonomy">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Taxonomy.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Taxonomy.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.Taxonomy.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.Taxonomy.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.UserAffiliation">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.UserAffiliation.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.UserAffiliation.Module">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.UserAffiliation.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Osrs.WellKnown.UserAffiliation.Providers.Postgres">
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Osrs\Osrs.WellKnown.UserAffiliation.Providers.Postgres.dll</HintPath>
+    </Reference>
+    <Reference Include="Pnnl.Oncor.DetProcessing.Core">
+      <HintPath>..\..\..\..\..\CheckedBuilds\vsonline\Pnnl\Pnnl.Oncor.DetProcessing.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Pnnl.Oncor.DetProcessor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Pnnl.Oncor.DetProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="Pnnl.Oncor.DetProcessor.Wq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CheckedBuilds\VSOnline\Pnnl\Pnnl.Oncor.DetProcessor.Wq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.4.1\lib\net46\System.IO.Packaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Thread.4.3.0\lib\net46\System.Threading.Thread.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="appConfig.jconfig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Osrs.Runtime.Configuration.jconfig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pnnl.Oncor.Host\Pnnl.Oncor.Host.csproj">
+      <Project>{12063480-718c-451a-ad2d-7e5e76f80aff}</Project>
+      <Name>Pnnl.Oncor.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Dets\Pnnl.Oncor.Rest.Dets.csproj">
+      <Project>{ea02165d-6f42-47f6-939f-7c98b10323f6}</Project>
+      <Name>Pnnl.Oncor.Rest.Dets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.EntityBundles\Pnnl.Oncor.Rest.EntityBundles.csproj">
+      <Project>{06c33884-e324-4088-8fdc-9554834980f3}</Project>
+      <Name>Pnnl.Oncor.Rest.EntityBundles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.FieldActivities\Pnnl.Oncor.Rest.FieldActivities.csproj">
+      <Project>{16C18475-2EF5-4F82-A45C-593FDA774976}</Project>
+      <Name>Pnnl.Oncor.Rest.FieldActivities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.FileTransfer\Pnnl.Oncor.Rest.FileTransfer.csproj">
+      <Project>{95f7898d-4364-4128-9889-bd193ac5fec4}</Project>
+      <Name>Pnnl.Oncor.Rest.FileTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Fish\Pnnl.Oncor.Rest.Fish.csproj">
+      <Project>{2d853781-08c6-495b-974a-54ca7de05a21}</Project>
+      <Name>Pnnl.Oncor.Rest.Fish</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Instruments\Pnnl.Oncor.Rest.Instruments.csproj">
+      <Project>{66001244-ccc5-4d69-a2b7-bb6a400c8b5f}</Project>
+      <Name>Pnnl.Oncor.Rest.Instruments</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Organizations\Pnnl.Oncor.Rest.Organizations.csproj">
+      <Project>{8ab59636-732a-4241-8f39-2108faa4fef7}</Project>
+      <Name>Pnnl.Oncor.Rest.Organizations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Persons\Pnnl.Oncor.Rest.Persons.csproj">
+      <Project>{0fb79fa8-2ef8-4eb0-bb0c-c66e474ca6f2}</Project>
+      <Name>Pnnl.Oncor.Rest.Persons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Projects\Pnnl.Oncor.Rest.Projects.csproj">
+      <Project>{07da734f-9ed6-4b85-b11b-bf9700463f3e}</Project>
+      <Name>Pnnl.Oncor.Rest.Projects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Security\Pnnl.Oncor.Rest.Security.csproj">
+      <Project>{94abb1a9-3a28-4b67-9c5d-53c4cf420cfe}</Project>
+      <Name>Pnnl.Oncor.Rest.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Sites\Pnnl.Oncor.Rest.Sites.csproj">
+      <Project>{435c15a0-a219-447a-afe4-c6a3249401e8}</Project>
+      <Name>Pnnl.Oncor.Rest.Sites</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Taxa\Pnnl.Oncor.Rest.Taxa.csproj">
+      <Project>{6f614fb2-0b3d-44ad-8faf-91d3500176fd}</Project>
+      <Name>Pnnl.Oncor.Rest.Taxa</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.UserAffiliation\Pnnl.Oncor.Rest.UserAffiliation.csproj">
+      <Project>{8efdca22-e094-42c7-9b9a-da84b8075fa7}</Project>
+      <Name>Pnnl.Oncor.Rest.UserAffiliation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.UserProfile\Pnnl.Oncor.Rest.UserProfile.csproj">
+      <Project>{c456941c-4575-40be-b1e9-e4884e9660e3}</Project>
+      <Name>Pnnl.Oncor.Rest.UserProfile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.Vegetation\Pnnl.Oncor.Rest.Vegetation.csproj">
+      <Project>{714b75bc-f3fd-4eb5-bbc9-7f78116514d6}</Project>
+      <Name>Pnnl.Oncor.Rest.Vegetation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest.WQ\Pnnl.Oncor.Rest.WQ.csproj">
+      <Project>{B057F664-8B0E-47A1-8695-CB391A4EBED6}</Project>
+      <Name>Pnnl.Oncor.Rest.WQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pnnl.Oncor.Rest\Pnnl.Oncor.Rest.csproj">
+      <Project>{4709669e-3afe-42f3-8e6e-4d6d428330ad}</Project>
+      <Name>Pnnl.Oncor.Rest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.1\build\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.1\build\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.1\build\NETStandard.Library.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

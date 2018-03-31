@@ -1,0 +1,1 @@
+﻿Server=mediamachine;Port=5432;Database=OncorDev;User Id=devUser;Password=devUser;CommandTimeout=300;Timeout=300;

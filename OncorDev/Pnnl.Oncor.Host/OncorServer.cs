@@ -45,19 +45,23 @@ namespace Pnnl.Oncor.Host
             return false;
         }
 
-        private bool Init()
+        internal bool Init()
         {
-            if (RuntimeModules.InitConfigAndLog())
+            if (this.State == Osrs.Runtime.RunState.Unknown || this.State == Osrs.Runtime.RunState.Created || this.State == Osrs.Runtime.RunState.FailedInitializing)
             {
-                if (RuntimeModules.InitSecurity())
+                if (RuntimeModules.InitConfigAndLog())
                 {
-                    if (RuntimeModules.Application())
+                    if (RuntimeModules.InitSecurity())
                     {
-                        return HttpModules.Initialize();
+                        if (RuntimeModules.Application())
+                        {
+                            return HttpModules.Initialize();
+                        }
                     }
                 }
+                return false;
             }
-            return false;
+            return true; //we're already initialized
         }
 
         private System.Threading.Timer scavengeTimer = null;

@@ -21,6 +21,7 @@ using Osrs.Oncor.WellKnown.WaterQuality.Module;
 using Pnnl.Oncor.DetProcessor;
 using Osrs.Oncor.WellKnown.Fish.Module;
 using Osrs.Oncor.WellKnown.Vegetation.Module;
+using System;
 
 namespace Pnnl.Oncor.Host
 {
@@ -113,14 +114,27 @@ namespace Pnnl.Oncor.Host
 
         internal static bool InitConfigAndLog()
         {
-            ConfigurationManager.Instance.Bootstrap();
-            ConfigurationManager.Instance.Initialize();
-            ConfigurationManager.Instance.Start();
+            //Do checks since when running under AppHost,that will initialize config/logging for us
+            if (ConfigurationManager.Instance.State != RunState.Running)
+            {
+                if (RuntimeUtils.Bootstrappable(ConfigurationManager.Instance.State))
+                    ConfigurationManager.Instance.Bootstrap();
+                if (RuntimeUtils.Initializable(ConfigurationManager.Instance.State))
+                    ConfigurationManager.Instance.Initialize();
+                if (RuntimeUtils.Startable(ConfigurationManager.Instance.State))
+                    ConfigurationManager.Instance.Start();
+            }
             if (ConfigurationManager.Instance.State == RunState.Running)
             {
-                LogManager.Instance.Bootstrap();
-                LogManager.Instance.Initialize();
-                LogManager.Instance.Start();
+                if (LogManager.Instance.State != RunState.Running)
+                {
+                    if (RuntimeUtils.Bootstrappable(LogManager.Instance.State))
+                        LogManager.Instance.Bootstrap();
+                    if (RuntimeUtils.Initializable(LogManager.Instance.State))
+                        LogManager.Instance.Initialize();
+                    if (RuntimeUtils.Startable(LogManager.Instance.State))
+                        LogManager.Instance.Start();
+                }
                 if (LogManager.Instance.State == RunState.Running)
                 {
                     logger = LogManager.Instance.GetProvider(typeof(OncorServer));
@@ -137,48 +151,54 @@ namespace Pnnl.Oncor.Host
                 if (LogManager.Instance.State == RunState.Running)
                 {
                     string method = "InitSecurity";
-
-                    Log(method, LogLevel.Info, "Starting AuthorizationManager");
-                    AuthorizationManager.Instance.Bootstrap();
-                    AuthorizationManager.Instance.Initialize();
-                    AuthorizationManager.Instance.Start();
-                    if (AuthorizationManager.Instance.State != RunState.Running)
+                    try
                     {
-                        Log(method, LogLevel.Warn, "Failed Starting AuthorizationManager");
-                        return false;
-                    }
+                        Log(method, LogLevel.Info, "Starting AuthorizationManager");
+                        AuthorizationManager.Instance.Bootstrap();
+                        AuthorizationManager.Instance.Initialize();
+                        AuthorizationManager.Instance.Start();
+                        if (AuthorizationManager.Instance.State != RunState.Running)
+                        {
+                            Log(method, LogLevel.Warn, "Failed Starting AuthorizationManager");
+                            return false;
+                        }
 
-                    Log(method, LogLevel.Info, "Starting IdentityManager");
-                    IdentityManager.Instance.Bootstrap();
-                    IdentityManager.Instance.Initialize();
-                    IdentityManager.Instance.Start();
-                    if (IdentityManager.Instance.State != RunState.Running)
+                        Log(method, LogLevel.Info, "Starting IdentityManager");
+                        IdentityManager.Instance.Bootstrap();
+                        IdentityManager.Instance.Initialize();
+                        IdentityManager.Instance.Start();
+                        if (IdentityManager.Instance.State != RunState.Running)
+                        {
+                            Log(method, LogLevel.Warn, "Failed Starting IdentityManager");
+                            return false;
+                        }
+
+                        Log(method, LogLevel.Info, "Starting AuthenticationManager");
+                        AuthenticationManager.Instance.Bootstrap();
+                        AuthenticationManager.Instance.Initialize();
+                        AuthenticationManager.Instance.Start();
+                        if (AuthenticationManager.Instance.State != RunState.Running)
+                        {
+                            Log(method, LogLevel.Warn, "Failed Starting AuthenticationManager");
+                            return false;
+                        }
+
+                        Log(method, LogLevel.Info, "Starting SessionManager");
+                        SessionManager.Instance.Bootstrap();
+                        SessionManager.Instance.Initialize();
+                        SessionManager.Instance.Start();
+                        if (SessionManager.Instance.State != RunState.Running)
+                        {
+                            Log(method, LogLevel.Warn, "Failed Starting SessionManager");
+                            return false;
+                        }
+
+                        return true;
+                    }
+                    catch(Exception e)
                     {
-                        Log(method, LogLevel.Warn, "Failed Starting IdentityManager");
-                        return false;
+                        Log(method, LogLevel.Warn, "Encountered a fault: "+e.Message);
                     }
-
-                    Log(method, LogLevel.Info, "Starting AuthenticationManager");
-                    AuthenticationManager.Instance.Bootstrap();
-                    AuthenticationManager.Instance.Initialize();
-                    AuthenticationManager.Instance.Start();
-                    if (AuthenticationManager.Instance.State != RunState.Running)
-                    {
-                        Log(method, LogLevel.Warn, "Failed Starting AuthenticationManager");
-                        return false;
-                    }
-
-                    Log(method, LogLevel.Info, "Starting SessionManager");
-                    SessionManager.Instance.Bootstrap();
-                    SessionManager.Instance.Initialize();
-                    SessionManager.Instance.Start();
-                    if (SessionManager.Instance.State != RunState.Running)
-                    {
-                        Log(method, LogLevel.Warn, "Failed Starting SessionManager");
-                        return false;
-                    }
-
-                    return true;
                 }
             }
             return false;

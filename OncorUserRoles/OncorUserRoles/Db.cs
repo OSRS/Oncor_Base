@@ -44,7 +44,7 @@ namespace OncorUserRoles
         internal IEnumerable<string> ListRequests()
         {
             List<String> items = new List<string>();
-            string q = listUsers + " WHERE \"Id\" IN (SELECT \"UserId\" FROM \"oncor\".\"RequestAffiliation\" UNION ALL SELECT \"UserId\" FROM \"oncor\".\"RequestRole\")";
+            string q = listUsers + " AND \"Id\" IN (SELECT \"UserId\" FROM \"oncor\".\"RequestAffiliation\" UNION ALL SELECT \"UserId\" FROM \"oncor\".\"RequestRole\")";
 
             NpgsqlCommand cmd = Setup(q);
             NpgsqlDataReader rdr = ExecuteReader(cmd);
@@ -105,17 +105,17 @@ namespace OncorUserRoles
 
         private int Count(string sql, Guid uid)
         {
-            int id = 0;
+            long id = 0;
             NpgsqlCommand cmd = Setup(sql);
             cmd.Parameters.AddWithValue("d", uid);
             NpgsqlDataReader rdr = ExecuteReader(cmd);
             if (rdr != null && rdr.Read())
             {
-                id = (int)rdr[0];
+                id = (long)rdr[0];
             }
             rdr = null;
             cmd.Dispose();
-            return id;
+            return (int)id;
         }
 
         internal Guid FindUser(string email)
@@ -252,9 +252,9 @@ namespace OncorUserRoles
                         orgName = orgName + " READ: ";
 
                     if (DBNull.Value.Equals(rdr[4]))
-                        items.Add(orgName + (string)rdr[4]);
-                    else
                         items.Add(orgName);
+                    else
+                        items.Add(orgName + (string)rdr[4]);
                 }
             }
             rdr = null;
